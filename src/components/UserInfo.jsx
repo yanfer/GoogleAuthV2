@@ -1,8 +1,9 @@
 'use client';
 
-import { useSession } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
 import SignInBtn from './SignInBtn';
 import Image from 'next/image';
+import { Button } from '@nextui-org/react';
 
 export default function UserInfo() {
   const { status, data: session } = useSession();
@@ -26,7 +27,12 @@ export default function UserInfo() {
           {' '}
           Name: <span className="font-bold">{session?.user?.email}</span>
         </div>
-        <div></div>
+        <Button
+          onClick={() => signOut()}
+          className="bg-slate-900 text-white px-6 py-2 rounded-md"
+        >
+          Sign Out
+        </Button>
       </div>
     );
   } else {
