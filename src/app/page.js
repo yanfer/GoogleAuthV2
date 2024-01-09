@@ -1,10 +1,10 @@
-import UserInfo from '@/components/Dashboard';
+import Content from '@/components/Content';
 
 export default function Home() {
   return (
     <main>
       <div className=" h-screen">
-        <UserInfo />
+        <Content />
       </div>
     </main>
   );
