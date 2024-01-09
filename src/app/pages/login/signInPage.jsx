@@ -5,7 +5,7 @@ import logo from '@/../public/Recurso1.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function SignInBtn() {
+export default function SignInPage() {
   return (
     <div className="contact-section-wrapper">
       <div class="contact-section">
@@ -20,18 +20,19 @@ export default function SignInBtn() {
               <div class="box-container">
                 <div class="form">
                   <div class="form-group">
-                    <div className="top-side">
+                    <div className="top-side flex justify-center">
                       <Image
                         className="seg-logo"
                         src={logo}
                         alt="seg-logo"
                         width={300}
                         height={300}
+                        priority={true}
                       />
-                      <h1 className="flex justify-center">
-                        Accede al Portal de la SEG
-                      </h1>
                     </div>
+                    <h1 className="flex justify-center pb-3 font-semibold text-lg text-white">
+                      Accede al Portal de la SEG
+                    </h1>
                     <div className="google-btn">
                       <button
                         onClick={() => signIn('google')}

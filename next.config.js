@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: 'lh3.googleusercontent.com',
         port: '',
       },
+      {
+        protocol: 'http',
+        hostname: 'uniim1.shutterfly.com',
+        port: '',
+      },
     ],
   },
 };
